@@ -542,7 +542,8 @@ export default {
         : this.valueKeys.indexOf(option)
       var newIndex = 0
       if (typeof option === 'object') {
-        newIndex = index === -1 ? this.internalValue.indexOf(this.internalValue.find((el) => el.__internalId === option.__internalId)) : index
+        debugger
+        newIndex = index === -1 ||  index === 0 ? this.internalValue.indexOf(this.internalValue.find((el) => el.__internalId === option.__internalId)) : index
       } else {
         newIndex = index === -1 ? this.internalValue.indexOf(this.internalValue.find((el) => el === option)) : index
       }
